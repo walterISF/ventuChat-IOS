@@ -11,16 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-    
-    var clicks = 0
-    
-    let maximo = 40
-    
+    @IBOutlet weak var textField: UITextField!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        label.text = "\(clicks)"
-        label.textColor = UIColor.green
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,18 +24,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onButtonClick(_ sender: Any) {
-        clicks = clicks + 1
-        if (clicks % 4 != 0) {
-            label.textColor = UIColor.green
-            label.text = "\(clicks)"
-        } else {
-            label.textColor = UIColor.red
-            label.text = "PIM"
-        }
-        if (clicks == maximo) {
-            clicks = 0
-        }
-        
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "chat") as! ChatController
+        vc.userNick = textField.text;
+        self.present(vc, animated: true, completion: nil)
     }
 
 }

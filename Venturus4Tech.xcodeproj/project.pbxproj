@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE48BA361F22889D00217C2B /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE48BA351F22889D00217C2B /* ChatController.swift */; };
 		BEFA11A81F2233BE0052038C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA11A71F2233BE0052038C /* AppDelegate.swift */; };
 		BEFA11AA1F2233BE0052038C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA11A91F2233BE0052038C /* ViewController.swift */; };
 		BEFA11AD1F2233BE0052038C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEFA11AB1F2233BE0052038C /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE48BA351F22889D00217C2B /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		BEFA11A41F2233BE0052038C /* Venturus4Tech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venturus4Tech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFA11A71F2233BE0052038C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEFA11A91F2233BE0052038C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				BEFA11A71F2233BE0052038C /* AppDelegate.swift */,
 				BEFA11A91F2233BE0052038C /* ViewController.swift */,
+				BE48BA351F22889D00217C2B /* ChatController.swift */,
 				BEFA11AB1F2233BE0052038C /* Main.storyboard */,
 				BEFA11AE1F2233BE0052038C /* Assets.xcassets */,
 				BEFA11B01F2233BE0052038C /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				BEFA11AA1F2233BE0052038C /* ViewController.swift in Sources */,
 				BEFA11A81F2233BE0052038C /* AppDelegate.swift in Sources */,
+				BE48BA361F22889D00217C2B /* ChatController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +305,7 @@
 				BEFA11B81F2233BE0052038C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

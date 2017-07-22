@@ -8,19 +8,48 @@
 
 import UIKit
 
-class ChatController : UIViewController {
+class ChatController : UIViewController, UITableViewDataSource {
     
     var userNick : String?;
     
-    @IBOutlet weak var nameLabel: UILabel!
+    var msgs : [[String: Any]] = [];
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = userNick
+        tableView.dataSource = self
+        //Remove os separadores de celulas vazias...
+        tableView.tableFooterView = UIView()
     }
     
     @IBAction func onSendClick(_ sender: Any) {
-        self.dismiss(animated: false, completion: nil)
+        var json : [String : Any] = [:];
+        json["author"] = "Guca"
+        json["message"] = "E ae, tudo bem?"
+        json["sent"] = 123456
+        msgs.append(json)
+        
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: msgs.count-1, section: 0)], with: .automatic)
+        tableView.endUpdates()
     }
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return msgs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celula_chat", for: indexPath) as! ChatCell
+        
+        return cell
+    }
+ 
     
 }

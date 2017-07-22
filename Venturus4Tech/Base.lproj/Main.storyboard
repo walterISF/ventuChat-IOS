@@ -142,7 +142,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="597"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1fN-AD-a0W">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celula_chat" id="1fN-AD-a0W" customClass="ChatCell" customModule="Venturus4Tech" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1fN-AD-a0W" id="q2w-Nx-zUF">
@@ -198,6 +198,13 @@
                                                 <constraint firstItem="WT8-Xf-xY6" firstAttribute="top" secondItem="q2w-Nx-zUF" secondAttribute="top" constant="10" id="rc7-26-x6x"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="WT8-Xf-xY6" id="PY0-1C-sdB"/>
+                                            <outlet property="message" destination="hNv-Z3-a6t" id="1eC-9Z-8ih"/>
+                                            <outlet property="userInitial" destination="ugU-2h-3Ls" id="WpL-3W-1l6"/>
+                                            <outlet property="userInitialBg" destination="jun-qa-Hpn" id="TbG-0z-q7n"/>
+                                            <outlet property="username" destination="KYL-A7-lxT" id="qd8-39-itr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -213,6 +220,9 @@
                             <constraint firstAttribute="bottom" secondItem="eHj-tJ-NtY" secondAttribute="bottom" id="wqs-DS-sdo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="aeQ-OW-njd" id="2IU-ry-K3F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAb-dn-oKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

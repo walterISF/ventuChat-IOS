@@ -221,6 +221,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="inputTextField" destination="j4C-vl-0tO" id="NYs-jg-pVH"/>
                         <outlet property="tableView" destination="aeQ-OW-njd" id="2IU-ry-K3F"/>
                     </connections>
                 </viewController>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BE48BA361F22889D00217C2B /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE48BA351F22889D00217C2B /* ChatController.swift */; };
 		BE48BA381F23E32500217C2B /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE48BA371F23E32500217C2B /* ChatCell.swift */; };
+		BE604E051F24490900157425 /* msg_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BE604E041F24490900157425 /* msg_sound.mp3 */; };
 		BEFA11A81F2233BE0052038C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA11A71F2233BE0052038C /* AppDelegate.swift */; };
 		BEFA11AA1F2233BE0052038C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA11A91F2233BE0052038C /* ViewController.swift */; };
 		BEFA11AD1F2233BE0052038C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEFA11AB1F2233BE0052038C /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		87EB074D9E122648758CBC26 /* Pods-Venturus4Tech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Venturus4Tech.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Venturus4Tech/Pods-Venturus4Tech.debug.xcconfig"; sourceTree = "<group>"; };
 		BE48BA351F22889D00217C2B /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		BE48BA371F23E32500217C2B /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		BE604E041F24490900157425 /* msg_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = msg_sound.mp3; sourceTree = "<group>"; };
 		BEFA11A41F2233BE0052038C /* Venturus4Tech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venturus4Tech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFA11A71F2233BE0052038C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEFA11A91F2233BE0052038C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		BEFA11A61F2233BE0052038C /* Venturus4Tech */ = {
 			isa = PBXGroup;
 			children = (
+				BE604E041F24490900157425 /* msg_sound.mp3 */,
 				BEFA11A71F2233BE0052038C /* AppDelegate.swift */,
 				BEFA11A91F2233BE0052038C /* ViewController.swift */,
 				BE48BA351F22889D00217C2B /* ChatController.swift */,
@@ -158,6 +161,7 @@
 			files = (
 				BEFA11B21F2233BE0052038C /* LaunchScreen.storyboard in Resources */,
 				BEFA11AF1F2233BE0052038C /* Assets.xcassets in Resources */,
+				BE604E051F24490900157425 /* msg_sound.mp3 in Resources */,
 				BEFA11AD1F2233BE0052038C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

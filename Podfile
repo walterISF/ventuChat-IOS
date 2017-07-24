@@ -7,5 +7,5 @@ target 'Venturus4Tech' do
 
   # Pods for Venturus4Tech
   pod 'Socket.IO-Client-Swift', '~> 10.2.0'
-
+  pod 'IQKeyboardManagerSwift'
 end

@@ -10,7 +10,7 @@ import UIKit
 import SocketIO
 import AVFoundation
 
-class ChatController : UIViewController, UITableViewDataSource {
+class ChatController : UIViewController, UITableViewDataSource, UITextFieldDelegate {
     
     var userNick : String?;
     
@@ -27,6 +27,7 @@ class ChatController : UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        inputTextField.delegate = self
         //Remove os separadores de celulas vazias...
         tableView.tableFooterView = UIView()
         if (isSoundEnabled()) {
@@ -53,9 +54,11 @@ class ChatController : UIViewController, UITableViewDataSource {
     }
     
     func updateTableView() {
+        let lastIndexPath = IndexPath(row: self.msgs.count-1, section: 0)
         tableView.beginUpdates()
-        tableView.insertRows(at: [IndexPath(row: self.msgs.count-1, section: 0)], with: .automatic)
+        tableView.insertRows(at: [lastIndexPath], with: .automatic)
         tableView.endUpdates()
+        tableView.scrollToRow(at: lastIndexPath, at: .bottom, animated: true)
     }
     
     @IBAction func onSendClick(_ sender: Any) {
@@ -66,7 +69,7 @@ class ChatController : UIViewController, UITableViewDataSource {
     }
     
     func getHistory() {
-        let url = URL(string: "http://192.168.2.117:3000/history")
+        let url = URL(string: "http://172.24.39.18:3000/history")
         
         let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
             let json = try? JSONSerialization.jsonObject(with: data!, options: [])
@@ -100,7 +103,7 @@ class ChatController : UIViewController, UITableViewDataSource {
         cell.message.text = msgText
         cell.username.text = msg["author"] as? String
         cell.dateLabel.text = "\(msg["sent"] as! String)"
-        cell.userInitial.text = "\(msgText!.characters.first!)"
+        cell.userInitial.text = "\(cell.username.text!.characters.first!)"
         
         return cell
     }
@@ -153,6 +156,11 @@ class ChatController : UIViewController, UITableViewDataSource {
         let defaults = UserDefaults.standard
         let enabled = defaults.bool(forKey: "audio")
         return enabled
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }

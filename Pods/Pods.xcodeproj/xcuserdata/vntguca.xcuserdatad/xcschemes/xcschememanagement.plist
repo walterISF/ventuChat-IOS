@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Venturus4Tech.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>33097D382AE32A1779EA49C2AEF69A6E</key>
+		<key>1178694F9323BBF4F64669D6B7D607C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C596975B2AF905AA63D3E07181531F27</key>
+		<key>6102E1377EAFCF9A34180AE82DD17E96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C235F77E101E742652CCF98FFDFA5182</key>
 		<dict>
 			<key>primary</key>
 			<true/>

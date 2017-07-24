@@ -9,7 +9,7 @@
 import UIKit
 import SocketIO
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        textField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onButtonClick(_ sender: Any) {
-        socket = SocketIOClient(socketURL: URL(string: "http://192.168.2.117:3000")!, config: [])
+        socket = SocketIOClient(socketURL: URL(string: "http://172.24.39.18:3000")!, config: [])
         
         socket?.on(clientEvent: .connect) {data, ack in
             self.openChat()
@@ -41,6 +42,11 @@ class ViewController: UIViewController {
         vc.userNick = textField.text
         vc.socket = socket
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }

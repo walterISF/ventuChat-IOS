@@ -1,4 +1,4 @@
 # venturus4tech_ios
-Venturus 4 Tech - iOS - Julho 2017
+Venturus 4 Tech - iOS
 
-Projeto das aulas que lecionei no Venturus4Tech
+Projeto das aulas no Venturus4Tech
